@@ -12,17 +12,44 @@ The excecise is designed to test your understanding of ASP.NET controllers, HTTP
 
 The system will track the roster for a single classroom.
 
-The system shall be capable of adding a teacher to the classroom.
+Roster
+Classroom //already started
+Students
 
-The system shall be capable of adding multiple students to the classroom.
+The system shall be capable of adding a teacher to the classroom. done
+
+The system shall be capable of adding multiple students to the classroom. done
 
 The system shall be capable of returning the names of the teacher and each student in the classroom after they have been added.
 
+{
+    teacher: "mr.smith",
+    students: [
+        "bobby",
+        "sally"
+    ]
+}
+
 The system shall not return a roster if no teacher has been assigned.
+
+catch and don't return if
+{
+    teacher: undefined
+}
 
 The system shall not return a roster if less than 3 students have been assigned.
 
+catch and don't return this data
+
+{
+    students: [
+        "bobby",
+        "sally"
+    ]
+}
+
 The system should return the roster in JSON format.
+
 
 The system should handle and log any exceptions.
 

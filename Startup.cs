@@ -1,4 +1,4 @@
-using edu_services.Domain;
+using edu_services.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +20,7 @@ namespace edu_services
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ISingleton, Singleton>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
